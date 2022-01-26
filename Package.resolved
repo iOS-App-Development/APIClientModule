@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "APIClient",
+        "repositoryURL": "https://github.com/iOS-App-Development/APIClient.git",
+        "state": {
+          "branch": "master",
+          "revision": "614c8787ee72b59d7fae7f69e74a1f75f5c1a12b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
