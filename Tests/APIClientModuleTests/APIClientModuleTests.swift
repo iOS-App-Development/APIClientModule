@@ -18,6 +18,8 @@ final class APIClientModuleTests: XCTestCase {
 
     func test_endToEndTestServerGETFruits() {
         let service = HomeService.init(httpClient: ephemeralClient(), baseURL: URL.init(string: "https://api.themoviedb.org/3/")!)
+        let exp = expectation(description: "Wait for load completion")
+        
         service.getMoviePopularList { resultObjects in
             switch resultObjects {
             case let .success(fruits)?:
@@ -29,6 +31,8 @@ final class APIClientModuleTests: XCTestCase {
             default:
                 XCTFail("Expected successful fruits result, got no result instead")
             }
+            exp.fulfill()
         }
+        wait(for: [exp], timeout: 5.0)
     }
 }
