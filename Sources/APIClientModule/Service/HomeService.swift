@@ -14,7 +14,7 @@ public struct HomeService
     let httpClient:HTTPClient
     let baseURL:URL
 
-    init(httpClient:HTTPClient,baseURL:URL) {
+    public init(httpClient:HTTPClient,baseURL:URL) {
         self.httpClient = httpClient
         self.baseURL = baseURL
     }
