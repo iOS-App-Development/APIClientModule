@@ -5,6 +5,8 @@ import PackageDescription
 
 let package = Package(
     name: "APIClientModule",
+    platforms: [.iOS(.v10), .macOS(.v10_13), .tvOS(.v10), .watchOS(.v2)],
+
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
